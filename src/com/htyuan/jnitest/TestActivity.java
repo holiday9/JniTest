@@ -11,15 +11,12 @@ public class TestActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test);
 		
-		NAdd test = new NAdd();
-		
-		setTitle("The Native Add Result is "+String.valueOf(test.add(10, 20)));
+		setTitle(stringFromJNI());
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.test, menu);
-		return true;
-	}
-
+	public native String  stringFromJNI();
+	public native String  unimplementedStringFromJNI();
+	static {
+        System.loadLibrary("hello-jni");
+    }
 }
