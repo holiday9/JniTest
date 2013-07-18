@@ -23,6 +23,14 @@ JNIEXPORT jstring JNICALL Java_com_htyuan_jnitest_TestActivity_stringFromJNI
 JNIEXPORT jstring JNICALL Java_com_htyuan_jnitest_TestActivity_unimplementedStringFromJNI
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_htyuan_jnitest_TestActivity
+ * Method:    bussearcher_stattext
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_htyuan_jnitest_TestActivity_bussearcher_1stattext
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif

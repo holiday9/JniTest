@@ -34,6 +34,17 @@ jstring Java_com_htyuan_jnitest_TestActivity_unimplementedStringFromJNI
 	return (*env)->NewStringUTF(env, "unimplemented string from jni"); 
 }
 
+/*
+ * Class:     com_htyuan_jnitest_TestActivity
+ * Method:    bussearcher_stattext
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_htyuan_jnitest_TestActivity_bussearcher_1stattext
+  (JNIEnv * env, jobject thiz, jstring station) {
+	 return Java_com_example_jnibussersearch_MainActivity_bussearcher_1stattext(env, thiz, station);
+
+//	return (*env)->NewStringUTF(env, "unimplemented string from jni"); 
+}
 
 
 
